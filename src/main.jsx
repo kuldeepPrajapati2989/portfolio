@@ -5,6 +5,7 @@ import {
   ExternalLink, Code2, Server, Database, Smartphone, ChevronUp
 } from "lucide-react";
 import "./index.css";
+import { Phone } from "lucide-react";
 
 const skills = [
   ["React.js", "Frontend", Code2],
@@ -23,21 +24,21 @@ const projects = [
     desc: "A full-stack shopping application with authentication, product management, cart, orders and REST APIs.",
     stack: "React • Node.js • Express • MongoDB",
     live: "#",
-    code: "#",
+    code: "https://github.com/kuldeepPrajapati2989/A2ZCODING",
   },
   {
     title: "Task Management App",
     desc: "Responsive task manager with CRUD operations, protected routes and a clean dashboard experience.",
     stack: "React • Express • MongoDB • JWT",
     live: "#",
-    code: "#",
+    code: "https://github.com/kuldeepPrajapati2989/taskFlow",
   },
   {
     title: "Developer Dashboard",
     desc: "Modern admin dashboard UI with reusable components, responsive layouts and API-driven data.",
     stack: "React • Tailwind CSS • REST API",
     live: "#",
-    code: "#",
+    code: "https://github.com/kuldeepPrajapati2989/A2ZCODING",
   },
 ];
 
@@ -58,7 +59,7 @@ function App() {
           </button>
 
           <div className="hidden gap-8 text-sm font-medium md:flex">
-            {["home","about","skills","projects","contact"].map(x => (
+            {["home", "about", "skills", "projects", "contact"].map(x => (
               <button key={x} onClick={() => go(x)} className="capitalize text-slate-300 transition hover:text-cyan-400">
                 {x}
               </button>
@@ -72,7 +73,7 @@ function App() {
 
         {open && (
           <div className="border-t border-white/10 px-5 py-4 md:hidden">
-            {["home","about","skills","projects","contact"].map(x => (
+            {["home", "about", "skills", "projects", "contact"].map(x => (
               <button key={x} onClick={() => go(x)} className="block w-full py-3 text-left capitalize text-slate-300">
                 {x}
               </button>
@@ -121,7 +122,7 @@ function App() {
                     <span className="h-3 w-3 rounded-full bg-green-400/80" />
                   </div>
                   <pre className="overflow-x-auto font-mono text-sm leading-8 text-slate-300">
-{`const developer = {
+                    {`const developer = {
   name: "Kuldeep",
   role: "MERN Developer",
   skills: [
@@ -193,8 +194,7 @@ function App() {
                   <p className="mt-4 flex-1 leading-7 text-slate-400">{p.desc}</p>
                   <p className="mt-5 text-sm font-medium text-cyan-400">{p.stack}</p>
                   <div className="mt-6 flex gap-5">
-                    <a href={p.live} className="project-link">Live Demo <ExternalLink size={15}/></a>
-                    <a href={p.code} className="project-link">Code <Github size={15}/></a>
+                    <a href={p.code} className="project-link">Code <Github size={15} /></a>
                   </div>
                 </article>
               ))}
@@ -209,12 +209,38 @@ function App() {
               I'm open to full-time opportunities and developer roles. Feel free
               to reach out for a project, job opportunity or collaboration.
             </p>
-            <a href="mailto:your-email@example.com" className="btn-primary mx-auto mt-8 inline-flex">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=kuldeepkumar2416@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary mx-auto mt-8 inline-flex"
+            >
               <Mail size={18} /> Send Email
             </a>
             <div className="mt-8 flex justify-center gap-6 text-slate-400">
-              <a href="#" className="icon-link"><Github /></a>
-              <a href="#" className="icon-link"><Linkedin /></a>
+
+              <a
+                href="https://github.com/kuldeepPrajapati2989"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-link"
+              >
+                <Github />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kuldeep-kumar-b39165377/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-link"
+              >
+                <Linkedin />
+              </a>
+              <a
+                href="tel:+918287557716"
+                className="icon-link"
+              >
+                <Phone />
+              </a>
             </div>
           </div>
         </section>
@@ -224,10 +250,10 @@ function App() {
         © {new Date().getFullYear()} Kuldeep. Built with React & Tailwind CSS.
       </footer>
 
-      <button onClick={() => window.scrollTo({top:0, behavior:"smooth"})}
+      <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="fixed bottom-5 right-5 rounded-full border border-white/10 bg-slate-900 p-3 text-slate-300 shadow-xl hover:text-cyan-400"
         aria-label="Back to top">
-        <ChevronUp size={18}/>
+        <ChevronUp size={18} />
       </button>
     </div>
   );
